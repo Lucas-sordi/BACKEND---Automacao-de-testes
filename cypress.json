@@ -1,0 +1,19 @@
+{
+  "projectId": "APItest",
+  "video": false,
+  "viewportWidth": 1520,
+  "viewportHeight": 880,
+  "chromeWebSecurity": false,
+  "numTestsKeptInMemory": 1,
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "reports/mochawesome-report",
+    "overwrite": false,
+    "html": true,
+    "json": true,
+    "timestamp": "mmddyyyy_HHMMss"
+  },
+  "screenshotsFolder": "reports/mochawesome-report/assets",
+  "ignoreTestFiles": "*.js",
+  "testFiles": "**/*.{feature,features}"
+}

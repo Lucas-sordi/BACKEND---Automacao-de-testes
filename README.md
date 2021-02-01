@@ -1,1 +1,4 @@
-Repositório criado para o desenvolvimento do backend da automação de testes
+Repositório para automação de teste de uma API (back-end)
+
+Instalar dependencias:
+npm install --save-dev cypress cypress-cucumber-preprocessor

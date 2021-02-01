@@ -1,0 +1,7 @@
+{
+  "baseUrl": "https://api-desafio.vercel.app/api",
+  "env": {
+    "global_timeout": 100000,
+    "environment": "PROD"
+  }
+}
