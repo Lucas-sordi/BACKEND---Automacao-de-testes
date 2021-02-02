@@ -1,4 +1,4 @@
-# Introdução
+## Introdução
 Este projeto realiza a automação de testes de uma API (Backend).
 
 O projeto foi feito com base no template criado e disponibilizado por:
