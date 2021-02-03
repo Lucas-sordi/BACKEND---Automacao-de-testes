@@ -1,25 +1,17 @@
+@feature_Client
 Feature: Client
 
-    @get_valid_emails
-    Scenario: (GET) List valid emails
-        When request to access all valid emails
+    @get_Valid_Emails
+    Scenario: (GET) List Valid Emails
+        When request all Valid Emails
         Then should return the response 'schema_name' status 200
-        And should return a non-null body
 
-    @get_clients
-    Scenario: (GET) List Meets clients
-        When request to search for all Meets registered clients
+    @get_Meets_Clients
+    Scenario: (GET) List Meets Clients
+        When request all Meets registered Clients
         Then should return the response 'schema_name' status 200
-        And should return a non-null body
 
-    @get_front_clients
-    Scenario: (GET) List front-end registered customers
-        When request to search for all front-end registered clients
+    @get_Frontend_Clients
+    Scenario: (GET) List Front-end registered Clients
+        When request all Front-end registered Clients
         Then should return the response 'schema_name' status 200
-        And should return a non-null body
-
-    @post_client
-    Scenario: (POST) Send client
-        When request to save a new front-end created client
-        Then should return the response 'schema_name' status 200
-        And should return the correct sent customer
