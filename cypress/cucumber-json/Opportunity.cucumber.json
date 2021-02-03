@@ -36,7 +36,7 @@
             "name": "request all Meets registered Opportunities",
             "result": {
               "status": "passed",
-              "duration": 275000000
+              "duration": 300000000
             }
           },
           {
@@ -46,7 +46,7 @@
             "name": "should return the response 'schema_name' status 200",
             "result": {
               "status": "passed",
-              "duration": 5000000
+              "duration": 4000000
             }
           }
         ]
@@ -75,7 +75,7 @@
             "name": "request all Front-end registered Opportunities",
             "result": {
               "status": "passed",
-              "duration": 244000000
+              "duration": 213000000
             }
           },
           {

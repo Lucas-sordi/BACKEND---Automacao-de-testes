@@ -12,6 +12,8 @@ O projeto foi feito com base no template criado e disponibilizado por:
 `cypress-plugin-tab`
 `fs`
 `fs-extra`
+`rimraf`
+`multiple-cucumber-html-reporter`
 
 Autores: 
 [Joao Vitor Cheron](joao.cheron_BOLS@compasso.com.br),
@@ -38,3 +40,6 @@ Para a execução, é necessária a instalação das seguintes dependências:
 #### 1.2 Execução
 1. Abrir um terminal no diretório `BACKEND---Automacao-de-testes`;
 2. Executar o comando `npm test` para que os testes sejam realizados.
+
+Para a execução de todos os testes, juntamente com a geração de Report (Caso todos os testes passem) e Screenshoot(Caso haja algum erro), pode ser utilizado o script:
+`npm run cypress:run`

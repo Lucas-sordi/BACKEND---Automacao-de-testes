@@ -36,7 +36,7 @@
             "name": "request all Clients with repeated Name",
             "result": {
               "status": "passed",
-              "duration": 251000000
+              "duration": 212000000
             }
           },
           {
@@ -46,7 +46,7 @@
             "name": "should return the response 'schema_name' status 200",
             "result": {
               "status": "passed",
-              "duration": 12000000
+              "duration": 5000000
             }
           }
         ]
