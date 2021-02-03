@@ -1,0 +1,56 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Union",
+    "line": 2,
+    "id": "union",
+    "tags": [
+      {
+        "name": "@feature_Union",
+        "line": 1
+      }
+    ],
+    "uri": "Union.feature",
+    "elements": [
+      {
+        "id": "union;(get)-list-clients-with-repeated-name",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "(GET) List Clients with repeated Name",
+        "tags": [
+          {
+            "name": "@feature_Union",
+            "line": 1
+          },
+          {
+            "name": "@get_Repeated_Name_Clients",
+            "line": 4
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "request all Clients with repeated Name",
+            "result": {
+              "status": "passed",
+              "duration": 251000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "should return the response 'schema_name' status 200",
+            "result": {
+              "status": "passed",
+              "duration": 12000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

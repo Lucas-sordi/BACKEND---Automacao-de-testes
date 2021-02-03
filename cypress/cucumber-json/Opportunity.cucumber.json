@@ -1,0 +1,95 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Opportunities",
+    "line": 2,
+    "id": "opportunities",
+    "tags": [
+      {
+        "name": "@feature_Opportunities",
+        "line": 1
+      }
+    ],
+    "uri": "Opportunity.feature",
+    "elements": [
+      {
+        "id": "opportunities;(get)-list-meets-opportunities",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "(GET) List Meets Opportunities",
+        "tags": [
+          {
+            "name": "@feature_Opportunities",
+            "line": 1
+          },
+          {
+            "name": "@get_Meets_Opportunities",
+            "line": 4
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "request all Meets registered Opportunities",
+            "result": {
+              "status": "passed",
+              "duration": 275000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "should return the response 'schema_name' status 200",
+            "result": {
+              "status": "passed",
+              "duration": 5000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "opportunities;(get)-list-front-end-registered-opportunities",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "(GET) List Front-end registered Opportunities",
+        "tags": [
+          {
+            "name": "@feature_Opportunities",
+            "line": 1
+          },
+          {
+            "name": "@get_Frontend_Opportunities",
+            "line": 9
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "request all Front-end registered Opportunities",
+            "result": {
+              "status": "passed",
+              "duration": 244000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "should return the response 'schema_name' status 200",
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

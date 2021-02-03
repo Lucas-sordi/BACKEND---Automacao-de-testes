@@ -1,0 +1,134 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Client",
+    "line": 2,
+    "id": "client",
+    "tags": [
+      {
+        "name": "@feature_Client",
+        "line": 1
+      }
+    ],
+    "uri": "Client.feature",
+    "elements": [
+      {
+        "id": "client;(get)-list-valid-emails",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "(GET) List Valid Emails",
+        "tags": [
+          {
+            "name": "@feature_Client",
+            "line": 1
+          },
+          {
+            "name": "@get_Valid_Emails",
+            "line": 4
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "request all Valid Emails",
+            "result": {
+              "status": "passed",
+              "duration": 545000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "should return the response 'schema_name' status 200",
+            "result": {
+              "status": "passed",
+              "duration": 5000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "client;(get)-list-meets-clients",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "(GET) List Meets Clients",
+        "tags": [
+          {
+            "name": "@feature_Client",
+            "line": 1
+          },
+          {
+            "name": "@get_Meets_Clients",
+            "line": 9
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "request all Meets registered Clients",
+            "result": {
+              "status": "passed",
+              "duration": 255000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "should return the response 'schema_name' status 200",
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "client;(get)-list-front-end-registered-clients",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "(GET) List Front-end registered Clients",
+        "tags": [
+          {
+            "name": "@feature_Client",
+            "line": 1
+          },
+          {
+            "name": "@get_Frontend_Clients",
+            "line": 14
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "request all Front-end registered Clients",
+            "result": {
+              "status": "passed",
+              "duration": 243000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "should return the response 'schema_name' status 200",
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
