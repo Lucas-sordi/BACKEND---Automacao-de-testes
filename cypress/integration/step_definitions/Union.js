@@ -16,3 +16,9 @@ Then(`should return the response {string} status {int}`, (schema, status) => {
         expect(when.response.status).to.equal(status)
     })
 });
+
+Then(`should return a non-null body`, () => {
+	cy.get("@Response").then(when => {
+        expect(when.response.body).to.not.be.null
+    })
+});

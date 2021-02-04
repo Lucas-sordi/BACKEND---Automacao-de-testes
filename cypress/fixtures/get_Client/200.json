@@ -1,0 +1,136 @@
+{
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "_id": "601b0f38951b3800081c019d",
+            "email": "paulolo@mailsac.com",
+            "cpf": "875.929.614-31",
+            "nome": "Test Automation Tonisha",
+            "nascimento": "13/11/1969",
+            "celular": "54999993342",
+            "cep": "99010051",
+            "logradouro": "Rua Coronel Chicuta",
+            "numero": "575",
+            "bairro": "Centro",
+            "cidade": "East Sergio",
+            "pais": "Nauru"
+        }
+    ],
+    "required": [
+        "_id"
+    ],
+    "properties": {
+        "_id": {
+            "type": "string",
+            "title": "The _id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "601b0f38951b3800081c019d"
+            ]
+        },
+        "email": {
+            "type": "string",
+            "title": "The email schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "paulolo@mailsac.com"
+            ]
+        },
+        "cpf": {
+            "type": "string",
+            "title": "The cpf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "875.929.614-31"
+            ]
+        },
+        "nome": {
+            "type": "string",
+            "title": "The nome schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Test Automation Tonisha"
+            ]
+        },
+        "nascimento": {
+            "type": "string",
+            "title": "The nascimento schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "13/11/1969"
+            ]
+        },
+        "celular": {
+            "type": "string",
+            "title": "The celular schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "54999993342"
+            ]
+        },
+        "cep": {
+            "type": "string",
+            "title": "The cep schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "99010051"
+            ]
+        },
+        "logradouro": {
+            "type": "string",
+            "title": "The logradouro schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Rua Coronel Chicuta"
+            ]
+        },
+        "numero": {
+            "type": "string",
+            "title": "The numero schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "575"
+            ]
+        },
+        "bairro": {
+            "type": "string",
+            "title": "The bairro schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Centro"
+            ]
+        },
+        "cidade": {
+            "type": "string",
+            "title": "The cidade schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "East Sergio"
+            ]
+        },
+        "pais": {
+            "type": "string",
+            "title": "The pais schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Nauru"
+            ]
+        }
+    },
+    "additionalProperties": true
+}

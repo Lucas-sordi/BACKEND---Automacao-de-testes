@@ -501,7 +501,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                 </a>
             </div>
             <p class="navbar-text">Feature:
-                <small>Opportunities</small>
+                <small>Union</small>
             </p>
         </div>
     </nav>
@@ -514,12 +514,12 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                 
                 
                 <i class="fa fa-tag fa-lg"></i>
-                <span class="tag">@feature_Opportunities</span>
+                <span class="tag">@feature_Union</span>
                 
                 
             </div>
             <h1>Feature:
-                <small>Opportunities</small>
+                <small>Union</small>
             </h1>
             <p></p>
         </div>
@@ -558,7 +558,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
         <tr>
             <td class="chart">
                 <canvas id="scenario-chart"></canvas>
-                <div class="total">2</div>
+                <div class="total">1</div>
             </td>
             <td>
                 <table class="tile_info">
@@ -608,15 +608,15 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                         
                             <i class="fa fa-tags fa-lg"></i>
                             
-                                <span class="tag">@feature_Opportunities</span>
+                                <span class="tag">@feature_Union</span>
                             
-                                <span class="tag">@get_Meets_Opportunities</span>
+                                <span class="tag">@get_Repeated_Name_Clients</span>
                             
                         
                     
                 </div>
 
-                <h2>Scenario: <small>(GET) List Meets Opportunities</small></h2>
+                <h2>Scenario: <small>(GET) List Clients with repeated Name</small></h2>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li>
@@ -633,7 +633,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
 
                     
                         <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">2</span>
+                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">3</span>
                         </li>
                     
 
@@ -663,7 +663,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                                     <span class="keyword highlight">When </span>
 
                                     
-                                        request all Meets registered Opportunities
+                                        request all Clients with repeated Name
                                         
                                     
 
@@ -764,60 +764,6 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
 
                     
                 
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="x_panel" style="height: auto;">
-            <div class="x_title">
-
-                <div class="tags">
-                    
-                        
-                        
-                            <i class="fa fa-tags fa-lg"></i>
-                            
-                                <span class="tag">@feature_Opportunities</span>
-                            
-                                <span class="tag">@get_Frontend_Opportunities</span>
-                            
-                        
-                    
-                </div>
-
-                <h2>Scenario: <small>(GET) List Front-end registered Opportunities</small></h2>
-
-                <ul class="nav navbar-right panel_toolbox">
-                    <li>
-                        <a class="collapse-link"><i class="fa fa-chevron-down"></i></a>
-                    </li>
-
-                    
-
-                    
-
-                    
-
-                    
-
-                    
-                        <li>
-                            <span class="step passed-background" data-toggle="tooltip" title="Scenario passed">2</span>
-                        </li>
-                    
-
-                    
-
-                    
-                </ul>
-
-                <div class="clearfix"></div>
-            </div>
-
-            <div class="x_content" style="display: none;">
-                <div class="scenario-step-container"></div>
-                    
                         
                             <div class="scenario-step-container">
 
@@ -830,68 +776,10 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                                 
 
                                 <div class="text">
-                                    <span class="keyword highlight">When </span>
+                                    <span class="keyword highlight">And </span>
 
                                     
-                                        request all Front-end registered Opportunities
-                                        
-                                    
-
-                                    
-
-                                </div>
-
-                                
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-                                
-                            </div>
-
-                        
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-                        
-
-                        
-                            
-                        
-
-                    
-                
-                        
-                            <div class="scenario-step-container">
-
-                                
-                                    
-                                        <div class="label" title="Success">
-                                            <i class="fa fa-check-circle fa-2x passed-color" data-toggle="tooltip" data-placement="top" title="Step passed"></i>
-                                        </div>
-                                    
-                                
-
-                                <div class="text">
-                                    <span class="keyword highlight">Then </span>
-
-                                    
-                                        should return the response 'schema_name' status 200
+                                        should return a non-null body
                                         
                                     
 
@@ -975,7 +863,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                     ],
                     datasets: [{
                         data: [
-                            2,
+                            1,
                             0,
                             0,
                             0,

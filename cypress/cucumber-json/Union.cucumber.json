@@ -36,7 +36,7 @@
             "name": "request all Clients with repeated Name",
             "result": {
               "status": "passed",
-              "duration": 212000000
+              "duration": 257000000
             }
           },
           {
@@ -47,6 +47,16 @@
             "result": {
               "status": "passed",
               "duration": 5000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "should return a non-null body",
+            "result": {
+              "status": "passed",
+              "duration": 3000000
             }
           }
         ]

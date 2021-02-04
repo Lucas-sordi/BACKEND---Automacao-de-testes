@@ -36,17 +36,27 @@
             "name": "request all Meets registered Opportunities",
             "result": {
               "status": "passed",
-              "duration": 300000000
+              "duration": 246000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 7,
-            "name": "should return the response 'schema_name' status 200",
+            "name": "should return the response 'get_Opportunity' status 200",
             "result": {
               "status": "passed",
-              "duration": 4000000
+              "duration": 5000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "should return a non-null body",
+            "result": {
+              "status": "passed",
+              "duration": 3000000
             }
           }
         ]
@@ -54,7 +64,7 @@
       {
         "id": "opportunities;(get)-list-front-end-registered-opportunities",
         "keyword": "Scenario",
-        "line": 10,
+        "line": 11,
         "name": "(GET) List Front-end registered Opportunities",
         "tags": [
           {
@@ -63,7 +73,7 @@
           },
           {
             "name": "@get_Frontend_Opportunities",
-            "line": 9
+            "line": 10
           }
         ],
         "type": "scenario",
@@ -71,18 +81,28 @@
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 11,
+            "line": 12,
             "name": "request all Front-end registered Opportunities",
             "result": {
               "status": "passed",
-              "duration": 213000000
+              "duration": 214000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 12,
-            "name": "should return the response 'schema_name' status 200",
+            "line": 13,
+            "name": "should return the response 'get_Opportunity' status 200",
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "should return a non-null body",
             "result": {
               "status": "passed",
               "duration": 3000000
