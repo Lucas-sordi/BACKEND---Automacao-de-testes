@@ -1,5 +1,5 @@
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps'
-import Opportunity from "../../services/Opportunity.service"
+import Opportunity from "../../services/opportunity.service"
 
 //get_Meets_Opportunities
 

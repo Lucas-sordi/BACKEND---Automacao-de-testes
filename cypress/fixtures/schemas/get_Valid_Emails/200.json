@@ -1,0 +1,64 @@
+{
+    "type": "array",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": [],
+    "examples": [
+        [
+            {
+                "_id": "60199799f8a3ab0008238548",
+                "email": "paulo@mailsac.com"
+            },
+            {
+                "_id": "601997a2f8a3ab0008238549",
+                "email": "leonardo@mailsac.com"
+            }
+        ]
+    ],
+    "additionalItems": true,
+    "items": {
+        "$id": "#/items",
+        "anyOf": [
+            {
+                "$id": "#/items/anyOf/0",
+                "type": "object",
+                "title": "The first anyOf schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                    {
+                        "_id": "60199799f8a3ab0008238548",
+                        "email": "paulo@mailsac.com"
+                    }
+                ],
+                "required": [
+                    "_id",
+                    "email"
+                ],
+                "properties": {
+                    "_id": {
+                        "$id": "#/items/anyOf/0/properties/_id",
+                        "type": "string",
+                        "title": "The _id schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "60199799f8a3ab0008238548"
+                        ]
+                    },
+                    "email": {
+                        "$id": "#/items/anyOf/0/properties/email",
+                        "type": "string",
+                        "title": "The email schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "paulo@mailsac.com"
+                        ]
+                    }
+                },
+                "additionalProperties": true
+            }
+        ]
+    }
+}

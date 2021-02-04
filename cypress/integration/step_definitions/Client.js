@@ -1,5 +1,5 @@
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps'
-import Client from "../../services/Client.service"
+import Client from "../../services/client.service"
 
 //get_Valid_Emails
 
@@ -12,7 +12,7 @@ When(`request all Valid Emails`, () => {
 
 Then(`should return the response {string} status {int}`, (schema, status) => {
 	cy.get("@Response").then(when => {
-        //cy.validateSchema(when.response.body, `${schema}/${status}`)
+        cy.validateSchema(when.response.body, `${schema}/${status}`)
         expect(when.response.status).to.equal(status)
     })
 });
