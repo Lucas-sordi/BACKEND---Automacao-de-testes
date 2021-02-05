@@ -22,6 +22,12 @@ Then(`should return the response {string} status {int}`, (schema, status) => {
     })
 });
 
+Then(`should return a non-null body`, () => {
+	cy.get("@Response").then(when => {
+        expect(when.response.body).to.not.be.null
+    })
+});
+
 //get_Frontend_Clients
 
 When(`request all Front-end registered Clients`, () => {
@@ -39,5 +45,11 @@ Then(`should return the response {string} and status {int}`, (schema, status) =>
           n++
         }
         expect(when.response.status).to.equal(status)
+    })
+});
+
+Then(`should return a non-null body`, () => {
+	cy.get("@Response").then(when => {
+        expect(when.response.body).to.not.be.null
     })
 });

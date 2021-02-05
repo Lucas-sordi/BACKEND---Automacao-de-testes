@@ -5,8 +5,10 @@ Feature: Client
     Scenario: (GET) List Meets Clients
         When request all Meets registered Clients
         Then should return the response 'get_Client' status 200
+        And should return a non-null body
 
     @get_Frontend_Clients
     Scenario: (GET) List Front-end registered Clients
         When request all Front-end registered Clients
         Then should return the response 'get_Client' and status 200
+        And should return a non-null body

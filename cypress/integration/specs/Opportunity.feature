@@ -1,5 +1,5 @@
-@feature_Opportunities
-Feature: Opportunities
+@feature_Opportunity
+Feature: Opportunity
 
     @get_Meets_Opportunities
     Scenario: (GET) List Meets Opportunities
