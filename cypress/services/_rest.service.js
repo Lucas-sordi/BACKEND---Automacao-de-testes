@@ -6,4 +6,13 @@ export default class Rest {
       failOnStatusCode: false
     })
   }
+  
+  static post(endpoint, body) {
+    return cy.request({
+      method: 'POST',
+      url: endpoint,
+      body: body,
+      failOnStatusCode: false
+    })
+  }
 }
