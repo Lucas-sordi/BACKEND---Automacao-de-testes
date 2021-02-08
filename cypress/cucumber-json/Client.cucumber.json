@@ -36,7 +36,7 @@
             "name": "request all Meets registered Clients",
             "result": {
               "status": "passed",
-              "duration": 4354000000
+              "duration": 319000000
             }
           },
           {
@@ -56,7 +56,7 @@
             "name": "should return a non-null body",
             "result": {
               "status": "passed",
-              "duration": 10000000
+              "duration": 8000000
             }
           }
         ]
@@ -85,7 +85,7 @@
             "name": "request all Front-end registered Clients",
             "result": {
               "status": "passed",
-              "duration": 374000000
+              "duration": 270000000
             }
           },
           {
@@ -95,7 +95,7 @@
             "name": "should return the response 'get_Client' and status 200",
             "result": {
               "status": "passed",
-              "duration": 4000000
+              "duration": 8000000
             }
           },
           {
@@ -134,7 +134,7 @@
             "name": "request to compare the registered clients",
             "result": {
               "status": "passed",
-              "duration": 10000000
+              "duration": 22000000
             }
           },
           {
@@ -144,7 +144,7 @@
             "name": "should return the correct data",
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 4000000
             }
           }
         ]

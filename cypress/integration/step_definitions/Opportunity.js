@@ -1,7 +1,7 @@
 import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps'
 import Opportunity from "../../services/opportunity.service.js"
 
-var resGetMeet, resGetFrontend
+var Response_Meets, Response_Front
 
 //get_Meets_Opportunities
 
@@ -9,7 +9,7 @@ When(`request all Meets registered Opportunities`, () => {
 	Opportunity.get_Meets_Opportunities().then(response => {
 		cy.log("RESPONSE: " + JSON.stringify(response.body))
         cy.wrap({response}).as("Response")
-        resGetMeet = response
+        Response_Meets = response
 	})
 });
 
@@ -36,7 +36,7 @@ When(`request all Front-end registered Opportunities`, () => {
 	Opportunity.get_Frontend_Opportunities().then(response => {
 		cy.log("RESPONSE: " + JSON.stringify(response.body))
         cy.wrap({response}).as("Response")
-        resGetFrontend = response
+        Response_Front = response
 	})
 });
 
