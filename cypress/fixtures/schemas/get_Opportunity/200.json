@@ -30,7 +30,28 @@
         }
     ],
     "required": [
-        "_id"
+        "_id",
+        "nome",
+        "tipo_pessoa",
+        "cpf_cnpj",
+        "celular",
+        "email",
+        "telefone",
+        "area",
+        "origem",
+        "cidade",
+        "uf",
+        "status",
+        "responsavel",
+        "equipe",
+        "valor",
+        "descricao",
+        "etapa",
+        "contato_nome",
+        "contato_cargo",
+        "contato_email",
+        "contato_telefone",
+        "contato_celular"
     ],
     "properties": {
         "_id": {

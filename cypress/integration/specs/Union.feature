@@ -2,7 +2,7 @@
 Feature: Union
 
     @post_Union
-    Scenario: (POST) Save Clients with repeated Names
-        When save Clients with repeated names
-        Then should return the response 'schema_name' status 200
-        And should return a non-null body
+    Scenario: (POST) Save Clients with repeated emails
+        When search and find clients with repeated emails
+        Then should return the response status 200
+        And save the clients on the page

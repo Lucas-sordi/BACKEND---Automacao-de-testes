@@ -20,7 +20,18 @@
         }
     ],
     "required": [
-        "_id"
+        "_id",
+        "email",
+        "cpf",
+        "nome",
+        "nascimento",
+        "celular",
+        "cep",
+        "logradouro",
+        "numero",
+        "bairro",
+        "cidade",
+        "pais"
     ],
     "properties": {
         "_id": {
