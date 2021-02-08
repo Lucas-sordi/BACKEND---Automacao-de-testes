@@ -36,7 +36,7 @@
             "name": "save Clients with repeated names",
             "result": {
               "status": "passed",
-              "duration": 462000000
+              "duration": 562000000
             }
           },
           {
@@ -46,8 +46,8 @@
             "name": "should return the response 'schema_name' status 200",
             "result": {
               "status": "failed",
-              "duration": 19000000,
-              "error_message": "AssertionError\n    + expected - actual\n\n    -502\n    +200\n\n    at Context.eval (https://api-desafio.vercel.app/__cypress/tests?p=cypress\\integration\\specs\\Union.feature:63:37)"
+              "duration": 24000000,
+              "error_message": "AssertionError\n    + expected - actual\n\n    -502\n    +200\n\n    at Context.eval (https://api-desafio.vercel.app/__cypress/tests?p=cypress\\integration\\specs\\Union.feature:64:37)"
             }
           },
           {
