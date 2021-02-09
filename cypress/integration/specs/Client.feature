@@ -15,5 +15,5 @@ Feature: Client
     
     @get_Compare_Client
     Scenario: (GET) Compare Front-end and Meets data
-        When request to compare the registered Clients
-        Then should return the correct data
+        When compare all registered Clients
+        Then should return an Array with wrong Clients

@@ -55,7 +55,7 @@ Then(`should return a non-null body`, () => {
 var errorList = []
 var clientErrorList = []
 
-When(`request to compare the registered Clients`, () => {
+When(`compare all registered Clients`, () => {
     //Remover Propriedade ._ID
     Response_Meets.forEach(element => {
         delete element._id
@@ -84,7 +84,7 @@ When(`request to compare the registered Clients`, () => {
     clientErrorList.push(Response_Front.filter(e => !nameList.includes(e.nome)))
 });
 
-Then(`should return the correct data`, () => {
+Then(`should return an Array with wrong Clients`, () => {
     if (errorList.length > 0) {
         cy.log("Clientes com Erro: " + JSON.stringify(clientErrorList))
     } else {

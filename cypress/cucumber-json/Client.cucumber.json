@@ -36,7 +36,7 @@
             "name": "request all Meets registered Clients",
             "result": {
               "status": "passed",
-              "duration": 921000000
+              "duration": 265000000
             }
           },
           {
@@ -46,7 +46,7 @@
             "name": "should return the response 'get_Client' status 200",
             "result": {
               "status": "passed",
-              "duration": 27000000
+              "duration": 17000000
             }
           },
           {
@@ -56,7 +56,7 @@
             "name": "should return a non-null body",
             "result": {
               "status": "passed",
-              "duration": 4000000
+              "duration": 3000000
             }
           }
         ]
@@ -85,7 +85,7 @@
             "name": "request all Front-end registered Clients",
             "result": {
               "status": "passed",
-              "duration": 291000000
+              "duration": 204000000
             }
           },
           {
@@ -95,7 +95,7 @@
             "name": "should return the response 'get_Client' and status 200",
             "result": {
               "status": "passed",
-              "duration": 16000000
+              "duration": 7000000
             }
           },
           {
@@ -105,7 +105,7 @@
             "name": "should return a non-null body",
             "result": {
               "status": "passed",
-              "duration": 6000000
+              "duration": 3000000
             }
           }
         ]
@@ -131,20 +131,20 @@
             "arguments": [],
             "keyword": "When ",
             "line": 18,
-            "name": "request to compare the registered Clients",
+            "name": "compare all registered Clients",
             "result": {
               "status": "passed",
-              "duration": 18000000
+              "duration": 13000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 19,
-            "name": "should return the correct data",
+            "name": "should return an Array with wrong Clients",
             "result": {
               "status": "passed",
-              "duration": 2000000
+              "duration": 1000000
             }
           }
         ]
