@@ -8,9 +8,9 @@ var testeArr
 When(`compare Clients to get those with repeated Names`, () => {
     Client.get_Meets_Clients().then(response => {
         response = response.body
-        var nameArr = response.map(item => item.nome)
-        var duplicatesArr = nameArr.filter((item, idx) => nameArr.indexOf(item) != idx)
-        testeArr = response.filter(e => duplicatesArr.includes(e.nome))
+        var nameArr = response.map(item => item.nome) //Apenas os Nomes
+        var duplicatesArr = nameArr.filter((item, idx) => nameArr.indexOf(item) != idx) //Apenas os Nomes Duplicados
+        testeArr = response.filter(e => duplicatesArr.includes(e.nome)) //Forma a Array
         if (testeArr.length === 0) {
             cy.log("Não há Clientes nomes repetidos!")
         }
