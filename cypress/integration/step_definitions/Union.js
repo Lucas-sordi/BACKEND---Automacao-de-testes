@@ -5,20 +5,27 @@ import Client from "../../services/client.service.js"
 var testeArr
 
 //post_Union
-When(`compare Clients to get those with repeated Emails`, () => {
+When(`compare Clients to get those with repeated Names`, () => {
     Client.get_Meets_Clients().then(response => {
         response = response.body
-        var emailArr = response.map(item => item.email)
-        var duplicatesArr = emailArr.filter((item, idx) => emailArr.indexOf(item) != idx)
-        testeArr = response.filter(e => duplicatesArr.includes(e.email))
+        var nameArr = response.map(item => item.nome)
+        var duplicatesArr = nameArr.filter((item, idx) => nameArr.indexOf(item) != idx)
+        testeArr = response.filter(e => duplicatesArr.includes(e.nome))
+        if (testeArr.length === 0) {
+            cy.log("Não há Clientes nomes repetidos!")
+        }
     })
 });
 
 Then(`save those Clients on Union with response status {int}`, (status) => {
-    testeArr.forEach(e => {
-        Union.post_Union(e).then(response => {
-            cy.log("RESPONSE: " + JSON.stringify(response.body))
-            expect(response.status).to.equal(status)
-        })
-    });
+    if (testeArr.length === 0) {
+        return true
+    } else {
+        testeArr.forEach(e => {
+            Union.post_Union(e).then(response => {
+                cy.log("RESPONSE: " + JSON.stringify(response.body))
+                expect(response.status).to.equal(status)
+            })
+        });
+    }
 });
