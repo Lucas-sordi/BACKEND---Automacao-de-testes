@@ -13,10 +13,10 @@
     "uri": "Union.feature",
     "elements": [
       {
-        "id": "union;(post)-save-clients-with-repeated-names",
+        "id": "union;(post)-save-clients-with-repeated-emails",
         "keyword": "Scenario",
         "line": 5,
-        "name": "(POST) Save Clients with repeated Names",
+        "name": "(POST) Save Clients with repeated Emails",
         "tags": [
           {
             "name": "@feature_Union",
@@ -33,30 +33,21 @@
             "arguments": [],
             "keyword": "When ",
             "line": 6,
-            "name": "save Clients with repeated names",
+            "name": "compare Clients to get those with repeated Emails",
             "result": {
               "status": "passed",
-              "duration": 562000000
+              "duration": 941000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 7,
-            "name": "should return the response 'schema_name' status 200",
+            "name": "save those Clients on Union with response status 201",
             "result": {
               "status": "failed",
-              "duration": 24000000,
-              "error_message": "AssertionError\n    + expected - actual\n\n    -502\n    +200\n\n    at Context.eval (https://api-desafio.vercel.app/__cypress/tests?p=cypress\\integration\\specs\\Union.feature:64:37)"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 8,
-            "name": "should return a non-null body",
-            "result": {
-              "status": "skipped"
+              "duration": 649000000,
+              "error_message": "AssertionError\n    + expected - actual\n\n    -502\n    +201\n\n    at Context.eval (https://api-desafio.vercel.app/__cypress/tests?p=cypress\\integration\\specs\\Union.feature:245:34)"
             }
           }
         ]

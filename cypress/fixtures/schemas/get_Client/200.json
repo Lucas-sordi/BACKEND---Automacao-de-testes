@@ -1,147 +1,268 @@
 {
-    "type": "object",
+    "type": "array",
     "title": "The root schema",
     "description": "The root schema comprises the entire JSON document.",
-    "default": {},
+    "default": [],
     "examples": [
-        {
-            "_id": "601b0f38951b3800081c019d",
-            "email": "paulolo@mailsac.com",
-            "cpf": "875.929.614-31",
-            "nome": "Test Automation Tonisha",
-            "nascimento": "13/11/1969",
-            "celular": "54999993342",
-            "cep": "99010051",
-            "logradouro": "Rua Coronel Chicuta",
-            "numero": "575",
-            "bairro": "Centro",
-            "cidade": "East Sergio",
-            "pais": "Nauru"
-        }
+        [
+            {
+                "_id": "602184562693e000099461d8",
+                "nome": "Test Automation Scotty",
+                "cpf": "863.243.690-21",
+                "nascimento": "16/07/1970",
+                "email": "outro@mailsac.com",
+                "celular": "54999998534",
+                "cep": "99010051",
+                "logradouro": "Rua Coronel Chicuta",
+                "numero": "575",
+                "bairro": "Centro",
+                "cidade": "West Vern",
+                "pais": "Niger"
+            },
+            {
+                "_id": "6021845c2693e000099461d9",
+                "nome": "Test Automation Franklin",
+                "cpf": "310.066.573-20",
+                "nascimento": "03/07/1996",
+                "email": "paulolo@mailsac.com",
+                "celular": "549999996",
+                "cep": "99010051",
+                "logradouro": "Rua Coronel Chicuta",
+                "numero": "575",
+                "bairro": "Centro",
+                "cidade": "Shonberg",
+                "pais": "Virgin Islands, British"
+            }
+        ]
     ],
-    "required": [
-        "_id",
-        "email",
-        "cpf",
-        "nome",
-        "nascimento",
-        "celular",
-        "cep",
-        "logradouro",
-        "numero",
-        "bairro",
-        "cidade",
-        "pais"
-    ],
-    "properties": {
-        "_id": {
-            "type": "string",
-            "title": "The _id schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "601b0f38951b3800081c019d"
-            ]
-        },
-        "email": {
-            "type": "string",
-            "title": "The email schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "paulolo@mailsac.com"
-            ]
-        },
-        "cpf": {
-            "type": "string",
-            "title": "The cpf schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "875.929.614-31"
-            ]
-        },
-        "nome": {
-            "type": "string",
-            "title": "The nome schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "Test Automation Tonisha"
-            ]
-        },
-        "nascimento": {
-            "type": "string",
-            "title": "The nascimento schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "13/11/1969"
-            ]
-        },
-        "celular": {
-            "type": "string",
-            "title": "The celular schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "54999993342"
-            ]
-        },
-        "cep": {
-            "type": "string",
-            "title": "The cep schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "99010051"
-            ]
-        },
-        "logradouro": {
-            "type": "string",
-            "title": "The logradouro schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "Rua Coronel Chicuta"
-            ]
-        },
-        "numero": {
-            "type": "string",
-            "title": "The numero schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "575"
-            ]
-        },
-        "bairro": {
-            "type": "string",
-            "title": "The bairro schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "Centro"
-            ]
-        },
-        "cidade": {
-            "type": "string",
-            "title": "The cidade schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "East Sergio"
-            ]
-        },
-        "pais": {
-            "type": "string",
-            "title": "The pais schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "Nauru"
-            ]
-        }
-    },
-    "additionalProperties": true
+    "additionalItems": true,
+    "items": {
+        "$id": "#/items",
+        "anyOf": [
+            {
+                "$id": "#/items/anyOf/0",
+                "type": "object",
+                "title": "The first anyOf schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                    {
+                        "_id": "602184562693e000099461d8",
+                        "nome": "Test Automation Scotty",
+                        "cpf": "863.243.690-21",
+                        "nascimento": "16/07/1970",
+                        "email": "outro@mailsac.com",
+                        "celular": "54999998534",
+                        "cep": "99010051",
+                        "logradouro": "Rua Coronel Chicuta",
+                        "numero": "575",
+                        "bairro": "Centro",
+                        "cidade": "West Vern",
+                        "pais": "Niger"
+                    }
+                ],
+                "required": [
+                    "_id",
+                    "nome",
+                    "cpf",
+                    "nascimento",
+                    "email",
+                    "celular",
+                    "cep",
+                    "logradouro",
+                    "numero",
+                    "bairro",
+                    "cidade",
+                    "pais"
+                ],
+                "properties": {
+                    "_id": {
+                        "$id": "#/items/anyOf/0/properties/_id",
+                        "type": "string",
+                        "title": "The _id schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "602184562693e000099461d8"
+                        ]
+                    },
+                    "nome": {
+                        "$id": "#/items/anyOf/0/properties/nome",
+                        "type": "string",
+                        "title": "The nome schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "Test Automation Scotty"
+                        ]
+                    },
+                    "cpf": {
+                        "$id": "#/items/anyOf/0/properties/cpf",
+                        "type": "string",
+                        "title": "The cpf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "863.243.690-21"
+                        ]
+                    },
+                    "nascimento": {
+                        "$id": "#/items/anyOf/0/properties/nascimento",
+                        "type": "string",
+                        "title": "The nascimento schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "16/07/1970"
+                        ]
+                    },
+                    "email": {
+                        "$id": "#/items/anyOf/0/properties/email",
+                        "type": "string",
+                        "title": "The email schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "outro@mailsac.com"
+                        ]
+                    },
+                    "celular": {
+                        "$id": "#/items/anyOf/0/properties/celular",
+                        "type": "string",
+                        "title": "The celular schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "54999998534"
+                        ]
+                    },
+                    "cep": {
+                        "$id": "#/items/anyOf/0/properties/cep",
+                        "type": "string",
+                        "title": "The cep schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "99010051"
+                        ]
+                    },
+                    "logradouro": {
+                        "$id": "#/items/anyOf/0/properties/logradouro",
+                        "type": "string",
+                        "title": "The logradouro schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "Rua Coronel Chicuta"
+                        ]
+                    },
+                    "numero": {
+                        "$id": "#/items/anyOf/0/properties/numero",
+                        "type": "string",
+                        "title": "The numero schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "575"
+                        ]
+                    },
+                    "bairro": {
+                        "$id": "#/items/anyOf/0/properties/bairro",
+                        "type": "string",
+                        "title": "The bairro schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "Centro"
+                        ]
+                    },
+                    "cidade": {
+                        "$id": "#/items/anyOf/0/properties/cidade",
+                        "type": "string",
+                        "title": "The cidade schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "West Vern"
+                        ]
+                    },
+                    "pais": {
+                        "$id": "#/items/anyOf/0/properties/pais",
+                        "type": "string",
+                        "title": "The pais schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "Niger"
+                        ]
+                    }
+                },
+                "additionalProperties": true
+            },
+            {
+                "$id": "#/items/anyOf/1",
+                "type": "object",
+                "title": "The second anyOf schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                    {
+                        "_id": "6021a6cc8ae9ef0007fdd46b",
+                        "nome": "Zé Pinguço",
+                        "celular": "999999999",
+                        "email": ""
+                    }
+                ],
+                "required": [
+                    "_id",
+                    "nome",
+                    "celular",
+                    "email"
+                ],
+                "properties": {
+                    "_id": {
+                        "$id": "#/items/anyOf/1/properties/_id",
+                        "type": "string",
+                        "title": "The _id schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "6021a6cc8ae9ef0007fdd46b"
+                        ]
+                    },
+                    "nome": {
+                        "$id": "#/items/anyOf/1/properties/nome",
+                        "type": "string",
+                        "title": "The nome schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "Zé Pinguço"
+                        ]
+                    },
+                    "celular": {
+                        "$id": "#/items/anyOf/1/properties/celular",
+                        "type": "string",
+                        "title": "The celular schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "999999999"
+                        ]
+                    },
+                    "email": {
+                        "$id": "#/items/anyOf/1/properties/email",
+                        "type": "string",
+                        "title": "The email schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            ""
+                        ]
+                    }
+                },
+                "additionalProperties": true
+            }
+        ]
+    }
 }

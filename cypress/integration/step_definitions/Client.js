@@ -15,11 +15,7 @@ When(`request all Meets registered Clients`, () => {
 
 Then(`should return the response {string} status {int}`, (schema, status) => {
 	cy.get("@Response").then(when => {
-        var n = 0
-        /* while (when.response.body[n]) {
-            cy.validateSchema(when.response.body[n], `${schema}/${status}`)
-            n++
-        } */
+        cy.validateSchema(when.response.body, `${schema}/${status}`)
         expect(when.response.status).to.equal(status)
     })
 });
@@ -35,18 +31,14 @@ Then(`should return a non-null body`, () => {
 When(`request all Front-end registered Clients`, () => {
 	Client.get_Frontend_Clients().then(response => {
         cy.log("RESPONSE: " + JSON.stringify(response.body))
-        cy.wrap({response}).as("Response")
+        cy.wrap({response}).as("Response")        
         Response_Front = response.body
     })
 });
 
 Then(`should return the response {string} and status {int}`, (schema, status) => {
 	cy.get("@Response").then(when => {
-        var n = 0
-        /* while (when.response.body[n]) {
-          cy.validateSchema(when.response.body[n], `${schema}/${status}`)
-          n++
-        } */
+        cy.validateSchema(when.response.body, `${schema}/${status}`)        
         expect(when.response.status).to.equal(status)
     })
 });
@@ -57,17 +49,20 @@ Then(`should return a non-null body`, () => {
     })
 });
 
-//@get_Compare_Client
+//get_Compare_Client
 
-When(`request to compare the registered clients`, () => {
-    //Remover Propriedade _ID
+//Variaveis Globais
+var errorList = []
+var clientErrorList = []
+
+When(`request to compare the registered Clients`, () => {
+    //Remover Propriedade ._ID
     Response_Meets.forEach(element => {
         delete element._id
     });
     Response_Front.forEach(element => {
         delete element._id
-    });
-    
+    });    
     //Remover Clientes Duplicados
     const uniqueClientsMeets = Array.from(new Set(Response_Meets.map(e => e.nome))).map(nome => {
         return Response_Meets.find(e => e.nome === nome)
@@ -75,32 +70,24 @@ When(`request to compare the registered clients`, () => {
     const uniqueClientsFront = Array.from(new Set(Response_Front.map(e => e.nome))).map(nome => {
         return Response_Front.find(e => e.nome === nome)
     })
-
-    //Lists
+    //Criacao das Listas
     var nameList = uniqueClientsMeets.map(e => e.nome)
     var filterList = uniqueClientsFront.filter(e => nameList.includes(e.nome))
-    var errorList = []
-
-    //Testes
+    //Teste de Validacao
     for (let index = 0; index < filterList.length; index++) {
         if (JSON.stringify(filterList[index]) !== JSON.stringify(uniqueClientsMeets[index])) {
             errorList.push(nameList[index])
         }        
     }
-
-    //Pega Objeto dos Clientes com Erro
-    var clientErrorList = filterList.filter(e => errorList.includes(e.nome))
+    //Lista dos Clientes com Erros (Objetos)
+    clientErrorList = filterList.filter(e => errorList.includes(e.nome))
     clientErrorList.push(Response_Front.filter(e => !nameList.includes(e.nome)))
+});
 
-    //Erros no CY.LOG
-    if(errorList.length > 0) {
+Then(`should return the correct data`, () => {
+    if (errorList.length > 0) {
         cy.log("Clientes com Erro: " + JSON.stringify(clientErrorList))
     } else {
         cy.log("Todos os Clientes passaram")
     }
 });
-
-Then(`should return the correct data`, () => {
-	return true;
-});
-
