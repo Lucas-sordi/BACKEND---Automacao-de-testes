@@ -15,5 +15,7 @@ Feature: Opportunity
 
     @get_Compare_Oportunity
     Scenario: (GET) Compare Front-end and Meets data
-        When request to compare the registered opportunities
-        Then should return the correct data
+        When compare all registered Opportunities
+        Then should return that opportunities have the same data info
+        And should return that opportunities are registered at both endpoints
+        And should return an Array with wrong Opportunities

@@ -59,6 +59,9 @@ When(`compare all registered Clients`, () => {
     Response_Front.forEach(element => {
         delete element._id
     });
+});
+
+Then(`should return that clients have the same data info`, () => {
     var nameList = []
     for (let i = 0; i < Response_Front.length; i++) {
         for (let j = 0; j < Response_Meets.length; j++) {
@@ -71,25 +74,32 @@ When(`compare all registered Clients`, () => {
                         for (var eachProperty in Response_Front[i]) {
                             try {
                                 expect(Response_Front[i][eachProperty]).to.eq(Response_Meets[j][eachProperty])
-                            } catch (err) {
-                              if(err) {
-                                wrongClients.push(Response_Front[j])
-                              }
-                              continue }
+                            } 
+                            catch (err) { 
+                                wrongClients.push(Response_Front[j]);
+                                continue 
+                            }
                         }
                     }
                 })
             }
         }
     }
+    
     var clientErrorList = Response_Front.filter(e => !nameList.includes(e.nome))
-    clientErrorList.forEach(element => {
-        cy.log("Cliente: " + element.nome).then(() => {
-            try {
-                expect(Response_Meets).to.include(JSON.stringify(element))
-            } catch (err) { return }
+    cy.wrap({ clientErrorList }).as("CliEL")
+});
+
+Then(`should return that clients are registered at both endpoints`, () => {
+    cy.get("@CliEL").then(when => {
+        when.clientErrorList.forEach(element => {
+            cy.log("Cliente: " + element.nome).then(() => {
+                try {
+                    expect(Response_Meets).to.include(JSON.stringify(element))
+                } catch (err) { return }
+            })
         })
-    });
+    })
 });
 
 Then(`should return an Array with wrong Clients`, () => {

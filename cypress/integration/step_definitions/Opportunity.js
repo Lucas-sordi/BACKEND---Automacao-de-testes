@@ -2,7 +2,7 @@ import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps'
 import Opportunity from "../../services/opportunity.service.js"
 
 var Response_Meets, Response_Front
-
+var wrongOpp = []
 //get_Meets_Opportunities
 
 When(`request all Meets registered Opportunities`, () => {
@@ -15,11 +15,7 @@ When(`request all Meets registered Opportunities`, () => {
 
 Then(`should return the response {string} status {int}`, (schema, status) => {
 	cy.get("@Response").then(when => {
-        /* var n = 0
-        while (when.response.body[n]) {
-            cy.validateSchema(when.response.body[n], `${schema}/${status}`)
-            n++
-        } */
+        cy.validateSchema(when.response.body[n], `${schema}/${status}`)
         expect(when.response.status).to.equal(status)
     })
 });
@@ -42,11 +38,7 @@ When(`request all Front-end registered Opportunities`, () => {
 
 Then(`should return the response {string} status {int}`, (schema, status) => {
 	cy.get("@Response").then(when => {
-       /*  var n = 0
-        while (when.response.body[n]) {
-            cy.validateSchema(when.response.body[n], `${schema}/${status}`)
-            n++
-        } */
+        cy.validateSchema(when.response.body[n], `${schema}/${status}`)
         expect(when.response.status).to.equal(status)
     })
 });
@@ -59,13 +51,16 @@ Then(`should return a non-null body`, () => {
 
 //@get_Compare_Oportunity
 
-When(`request to compare the registered opportunities`, () => {
+When(`compare all registered Opportunities`, () => {
     Response_Meets.forEach(element => {
         delete element._id
     });
     Response_Front.forEach(element => {
         delete element._id
     });
+});
+
+Then(`should return that opportunities have the same data info`, () => {
     var nameList = []
     for (let i = 0; i < Response_Front.length; i++) {
         for (let j = 0; j < Response_Meets.length; j++) {
@@ -78,23 +73,34 @@ When(`request to compare the registered opportunities`, () => {
                         for (var eachProperty in Response_Front[i]) {
                             try {
                                 expect(Response_Front[i][eachProperty]).to.eq(Response_Meets[j][eachProperty])
-                            } catch (err) { continue }
+                            } 
+                            catch (err) { 
+                                wrongOpp.push(Response_Front[j]);
+                                continue 
+                            }
                         }
                     }
                 })
             }
         }
     }
+    
     var opportunityErrorList = Response_Front.filter(e => !nameList.includes(e.nome))
-    opportunityErrorList.forEach(element => {
-        cy.log("Oportunidade: " + element.nome).then(() => {
-            try {
-                expect(Response_Meets).to.include(JSON.stringify(element))
-            } catch (err) { return }
-        })
-    });
+    cy.wrap({ opportunityErrorList }).as("OppEL")
 });
 
-Then(`should return the correct data`, () => {
-	return true;
+Then(`should return that opportunities are registered at both endpoints`, () => {
+    cy.get("@OppEL").then(when => {
+        when.opportunityErrorList.forEach(element => {
+            cy.log("Oportunidade: " + element.nome).then(() => {
+                try {
+                    expect(Response_Meets).to.include(JSON.stringify(element))
+                } catch (err) { return }
+            })
+        })
+    })
+});
+
+Then(`should return an Array with wrong Opportunities`, () => {
+    cy.log("Wrong opportunities: " + JSON.stringify(wrongOpp))
 });

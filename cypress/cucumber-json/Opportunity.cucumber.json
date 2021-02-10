@@ -36,7 +36,7 @@
             "name": "request all Meets registered Opportunities",
             "result": {
               "status": "passed",
-              "duration": 275000000
+              "duration": 611000000
             }
           },
           {
@@ -46,7 +46,7 @@
             "name": "should return the response 'get_Opportunity' status 200",
             "result": {
               "status": "passed",
-              "duration": 20000000
+              "duration": 37000000
             }
           },
           {
@@ -56,7 +56,7 @@
             "name": "should return a non-null body",
             "result": {
               "status": "passed",
-              "duration": 8000000
+              "duration": 7000000
             }
           }
         ]
@@ -85,7 +85,7 @@
             "name": "request all Front-end registered Opportunities",
             "result": {
               "status": "passed",
-              "duration": 214000000
+              "duration": 250000000
             }
           },
           {
@@ -95,7 +95,7 @@
             "name": "should return the response 'get_Opportunity' status 200",
             "result": {
               "status": "passed",
-              "duration": 12000000
+              "duration": 15000000
             }
           },
           {
@@ -131,17 +131,37 @@
             "arguments": [],
             "keyword": "When ",
             "line": 18,
-            "name": "request to compare the registered opportunities",
+            "name": "compare all registered Opportunities",
             "result": {
               "status": "passed",
-              "duration": 25000000
+              "duration": 21000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 19,
-            "name": "should return the correct data",
+            "name": "should return that opportunities have the same data info",
+            "result": {
+              "status": "passed",
+              "duration": 10000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "should return that opportunities are registered at both endpoints",
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "should return an Array with wrong Opportunities",
             "result": {
               "status": "passed",
               "duration": 4000000
