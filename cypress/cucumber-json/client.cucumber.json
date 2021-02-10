@@ -10,20 +10,20 @@
         "line": 1
       }
     ],
-    "uri": "Client.feature",
+    "uri": "client.feature",
     "elements": [
       {
-        "id": "client;(get)-list-meets-clients",
+        "id": "client;(get)-list-valid-emails",
         "keyword": "Scenario",
         "line": 5,
-        "name": "(GET) List Meets Clients",
+        "name": "(GET) List Valid Emails",
         "tags": [
           {
             "name": "@feature_Client",
             "line": 1
           },
           {
-            "name": "@get_Meets_Clients",
+            "name": "@get_Valid_Emails",
             "line": 4
           }
         ],
@@ -33,20 +33,20 @@
             "arguments": [],
             "keyword": "When ",
             "line": 6,
-            "name": "request all Meets registered Clients",
+            "name": "request all Valid Emails",
             "result": {
               "status": "passed",
-              "duration": 1362000000
+              "duration": 609000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 7,
-            "name": "should return the response 'get_Client' status 200",
+            "name": "should return the response 'get_Valid_Emails' status 200",
             "result": {
               "status": "passed",
-              "duration": 48000000
+              "duration": 31000000
             }
           },
           {
@@ -56,23 +56,23 @@
             "name": "should return a non-null body",
             "result": {
               "status": "passed",
-              "duration": 12000000
+              "duration": 14000000
             }
           }
         ]
       },
       {
-        "id": "client;(get)-list-front-end-registered-clients",
+        "id": "client;(get)-list-meets-clients",
         "keyword": "Scenario",
         "line": 11,
-        "name": "(GET) List Front-end registered Clients",
+        "name": "(GET) List Meets Clients",
         "tags": [
           {
             "name": "@feature_Client",
             "line": 1
           },
           {
-            "name": "@get_Frontend_Clients",
+            "name": "@get_Meets_Clients",
             "line": 10
           }
         ],
@@ -82,20 +82,20 @@
             "arguments": [],
             "keyword": "When ",
             "line": 12,
-            "name": "request all Front-end registered Clients",
+            "name": "request all Meets registered Clients",
             "result": {
               "status": "passed",
-              "duration": 525000000
+              "duration": 361000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 13,
-            "name": "should return the response 'get_Client' and status 200",
+            "name": "should return the response 'get_Client' status 200",
             "result": {
               "status": "passed",
-              "duration": 25000000
+              "duration": 22000000
             }
           },
           {
@@ -105,23 +105,23 @@
             "name": "should return a non-null body",
             "result": {
               "status": "passed",
-              "duration": 8000000
+              "duration": 19000000
             }
           }
         ]
       },
       {
-        "id": "client;(get)-compare-front-end-and-meets-data",
+        "id": "client;(get)-list-front-end-registered-clients",
         "keyword": "Scenario",
         "line": 17,
-        "name": "(GET) Compare Front-end and Meets data",
+        "name": "(GET) List Front-end registered Clients",
         "tags": [
           {
             "name": "@feature_Client",
             "line": 1
           },
           {
-            "name": "@get_Compare_Client",
+            "name": "@get_Frontend_Clients",
             "line": 16
           }
         ],
@@ -131,20 +131,30 @@
             "arguments": [],
             "keyword": "When ",
             "line": 18,
-            "name": "compare all registered Clients",
+            "name": "request all Front-end registered Clients",
             "result": {
               "status": "passed",
-              "duration": 96000000
+              "duration": 274000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 19,
-            "name": "should return an Array with wrong Clients",
+            "name": "should return the response 'get_Client' status 200",
             "result": {
               "status": "passed",
-              "duration": 7000000
+              "duration": 13000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "should return a non-null body",
+            "result": {
+              "status": "passed",
+              "duration": 17000000
             }
           }
         ]
@@ -152,3 +162,4 @@
     ]
   }
 ]
+

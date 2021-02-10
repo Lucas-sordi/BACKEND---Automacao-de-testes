@@ -2,6 +2,7 @@ import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps'
 import Client from "../../services/client.service.js"
 
 var Response_Meets, Response_Front
+var wrongClients = []
 
 //get_Meets_Clients
 
@@ -70,7 +71,11 @@ When(`compare all registered Clients`, () => {
                         for (var eachProperty in Response_Front[i]) {
                             try {
                                 expect(Response_Front[i][eachProperty]).to.eq(Response_Meets[j][eachProperty])
-                            } catch (err) { continue }
+                            } catch (err) {
+                              if(err) {
+                                wrongClients.push(Response_Front[j])
+                              }
+                              continue }
                         }
                     }
                 })
@@ -88,5 +93,5 @@ When(`compare all registered Clients`, () => {
 });
 
 Then(`should return an Array with wrong Clients`, () => {
-    return true
+    cy.log("Wrong clients: " + JSON.stringify(wrongClients))
 });
