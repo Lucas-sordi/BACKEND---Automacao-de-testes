@@ -35,7 +35,7 @@ Then(`save those Clients on Union with response status {int}`, (status) => {
         return true
     } else {
         testeArr.forEach(e => {
-            Union.post_Union().then(response => {
+            Union.post_Union(e).then(response => {
                 cy.log("RESPONSE: " + JSON.stringify(response.body))
                 expect(response.status).to.equal(status)
             })

@@ -36,7 +36,7 @@
             "name": "request all Meets registered Clients",
             "result": {
               "status": "passed",
-              "duration": 303000000
+              "duration": 485000000
             }
           },
           {
@@ -46,7 +46,7 @@
             "name": "should return the response 'get_Client' status 200",
             "result": {
               "status": "passed",
-              "duration": 14000000
+              "duration": 16000000
             }
           },
           {
@@ -56,7 +56,7 @@
             "name": "should return a non-null body",
             "result": {
               "status": "passed",
-              "duration": 4000000
+              "duration": 5000000
             }
           }
         ]
@@ -85,7 +85,7 @@
             "name": "request all Front-end registered Clients",
             "result": {
               "status": "passed",
-              "duration": 267000000
+              "duration": 210000000
             }
           },
           {
@@ -95,7 +95,7 @@
             "name": "should return the response 'get_Client' and status 200",
             "result": {
               "status": "passed",
-              "duration": 7000000
+              "duration": 6000000
             }
           },
           {
@@ -134,7 +134,7 @@
             "name": "compare all registered Clients",
             "result": {
               "status": "passed",
-              "duration": 20000000
+              "duration": 60000000
             }
           },
           {
@@ -144,7 +144,7 @@
             "name": "should return an Array with wrong Clients",
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 2000000
             }
           }
         ]
