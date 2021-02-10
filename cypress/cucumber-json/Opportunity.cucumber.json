@@ -36,7 +36,7 @@
             "name": "request all Meets registered Opportunities",
             "result": {
               "status": "passed",
-              "duration": 4941000000
+              "duration": 275000000
             }
           },
           {
@@ -46,7 +46,7 @@
             "name": "should return the response 'get_Opportunity' status 200",
             "result": {
               "status": "passed",
-              "duration": 33000000
+              "duration": 20000000
             }
           },
           {
@@ -85,7 +85,7 @@
             "name": "request all Front-end registered Opportunities",
             "result": {
               "status": "passed",
-              "duration": 1696000000
+              "duration": 214000000
             }
           },
           {
@@ -95,7 +95,7 @@
             "name": "should return the response 'get_Opportunity' status 200",
             "result": {
               "status": "passed",
-              "duration": 11000000
+              "duration": 12000000
             }
           },
           {
@@ -134,7 +134,7 @@
             "name": "request to compare the registered opportunities",
             "result": {
               "status": "passed",
-              "duration": 32000000
+              "duration": 25000000
             }
           },
           {
@@ -144,7 +144,7 @@
             "name": "should return the correct data",
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 4000000
             }
           }
         ]
