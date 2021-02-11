@@ -5,10 +5,8 @@ import Client from "../../services/client.service.js"
 var testeArr
 
 //post_Union
-When(`compare Clients to get those with repeated Names`, () => {
+When(`compare Clients and get the ones with repeated names`, () => {
     Client.get_Meets_Clients().then(response => {
-        //Encaminhar Nome e Email
-        //Remover ._ID
         response = response.body
         for (let i = 0; i < response.length; i++) {
             for (var eachProperty in response[i]) {

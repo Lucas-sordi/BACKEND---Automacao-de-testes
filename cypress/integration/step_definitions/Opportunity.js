@@ -51,7 +51,7 @@ Then(`should return a non-null body`, () => {
 
 //@get_Compare_Oportunity
 
-When(`compare all registered Opportunities`, () => {
+When(`compare all registered Opportunities on the platform with front-end`, () => {
     Response_Meets.forEach(element => {
         delete element._id
     });
@@ -60,7 +60,7 @@ When(`compare all registered Opportunities`, () => {
     });
 });
 
-Then(`should return that opportunities have the same data info`, () => {
+Then(`should return opportunities that have the same data info`, () => {
     var nameList = []
     for (let i = 0; i < Response_Front.length; i++) {
         for (let j = 0; j < Response_Meets.length; j++) {
@@ -102,5 +102,10 @@ Then(`should return that opportunities are registered at both endpoints`, () => 
 });
 
 Then(`should return an Array with wrong Opportunities`, () => {
-    cy.log("Wrong opportunities: " + JSON.stringify(wrongOpp))
+    if(wrongOpp.length == 0) {
+      cy.log("Not found wrong opportunities")
+    }
+    else {
+      cy.log("Wrong opportunities: " + JSON.stringify(wrongOpp))
+    }
 });

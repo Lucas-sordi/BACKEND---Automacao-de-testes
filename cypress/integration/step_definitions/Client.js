@@ -52,7 +52,7 @@ Then(`should return a non-null body`, () => {
 
 //get_Compare_Client
 
-When(`compare all registered Clients`, () => {
+When(`compare all registered Clients on the platform with front-end clients`, () => {
     Response_Meets.forEach(element => {
         delete element._id
     });
@@ -61,7 +61,7 @@ When(`compare all registered Clients`, () => {
     });
 });
 
-Then(`should return that clients have the same data info`, () => {
+Then(`should return clients who have the same data info`, () => {
     var nameList = []
     for (let i = 0; i < Response_Front.length; i++) {
         for (let j = 0; j < Response_Meets.length; j++) {
@@ -103,5 +103,10 @@ Then(`should return that clients are registered at both endpoints`, () => {
 });
 
 Then(`should return an Array with wrong Clients`, () => {
-    cy.log("Wrong clients: " + JSON.stringify(wrongClients))
+    if(wrongClients.length == 0) {
+      cy.log("Not found wrong clients")
+    }
+    else {
+      cy.log("Wrong clients: " + JSON.stringify(wrongClients))
+    }
 });

@@ -1,29 +1,29 @@
 [
   {
     "keyword": "Feature",
-    "name": "Opportunity",
+    "name": "Client",
     "line": 2,
-    "id": "opportunity",
+    "id": "client",
     "tags": [
       {
-        "name": "@feature_Opportunity",
+        "name": "@feature_Client",
         "line": 1
       }
     ],
-    "uri": "Opportunity.feature",
+    "uri": "Client.feature",
     "elements": [
       {
-        "id": "opportunity;(get)-list-meets-opportunities",
+        "id": "client;(get)-list-meets-clients",
         "keyword": "Scenario",
         "line": 5,
-        "name": "(GET) List Meets Opportunities",
+        "name": "(GET) List Meets Clients",
         "tags": [
           {
-            "name": "@feature_Opportunity",
+            "name": "@feature_Client",
             "line": 1
           },
           {
-            "name": "@get_Meets_Opportunities",
+            "name": "@get_Meets_Clients",
             "line": 4
           }
         ],
@@ -33,20 +33,20 @@
             "arguments": [],
             "keyword": "When ",
             "line": 6,
-            "name": "request all Meets registered Opportunities",
+            "name": "request all Meets registered Clients",
             "result": {
               "status": "passed",
-              "duration": 1233000000
+              "duration": 546000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 7,
-            "name": "should return the response 'get_Opportunity' status 200",
+            "name": "should return the response 'get_Client' status 200",
             "result": {
               "status": "passed",
-              "duration": 31000000
+              "duration": 61000000
             }
           },
           {
@@ -56,23 +56,23 @@
             "name": "should return a non-null body",
             "result": {
               "status": "passed",
-              "duration": 7000000
+              "duration": 8000000
             }
           }
         ]
       },
       {
-        "id": "opportunity;(get)-list-front-end-registered-opportunities",
+        "id": "client;(get)-list-front-end-registered-clients",
         "keyword": "Scenario",
         "line": 11,
-        "name": "(GET) List Front-end registered Opportunities",
+        "name": "(GET) List Front-end registered Clients",
         "tags": [
           {
-            "name": "@feature_Opportunity",
+            "name": "@feature_Client",
             "line": 1
           },
           {
-            "name": "@get_Frontend_Opportunities",
+            "name": "@get_Frontend_Clients",
             "line": 10
           }
         ],
@@ -82,20 +82,20 @@
             "arguments": [],
             "keyword": "When ",
             "line": 12,
-            "name": "request all Front-end registered Opportunities",
+            "name": "request all Front-end registered Clients",
             "result": {
               "status": "passed",
-              "duration": 394000000
+              "duration": 349000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 13,
-            "name": "should return the response 'get_Opportunity' status 200",
+            "name": "should return the response 'get_Client' and status 200",
             "result": {
               "status": "passed",
-              "duration": 5000000
+              "duration": 26000000
             }
           },
           {
@@ -105,23 +105,23 @@
             "name": "should return a non-null body",
             "result": {
               "status": "passed",
-              "duration": 4000000
+              "duration": 7000000
             }
           }
         ]
       },
       {
-        "id": "opportunity;(get)-compare-front-end-and-meets-data",
+        "id": "client;(get)-compare-front-end-and-meets-data",
         "keyword": "Scenario",
         "line": 17,
         "name": "(GET) Compare Front-end and Meets data",
         "tags": [
           {
-            "name": "@feature_Opportunity",
+            "name": "@feature_Client",
             "line": 1
           },
           {
-            "name": "@get_Compare_Oportunity",
+            "name": "@get_Compare_Client",
             "line": 16
           }
         ],
@@ -131,37 +131,37 @@
             "arguments": [],
             "keyword": "When ",
             "line": 18,
-            "name": "compare all registered Opportunities",
+            "name": "compare all registered Clients",
             "result": {
               "status": "passed",
-              "duration": 17000000
+              "duration": 18000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 19,
-            "name": "should return that opportunities have the same data info",
+            "name": "should return that clients have the same data info",
             "result": {
               "status": "passed",
-              "duration": 7000000
+              "duration": 72000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 20,
-            "name": "should return that opportunities are registered at both endpoints",
+            "name": "should return that clients are registered at both endpoints",
             "result": {
               "status": "passed",
-              "duration": 3000000
+              "duration": 2000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 21,
-            "name": "should return an Array with wrong Opportunities",
+            "name": "should return an Array with wrong Clients",
             "result": {
               "status": "passed",
               "duration": 3000000
