@@ -18,3 +18,4 @@ Feature: Opportunity
         When compare all registered Opportunities on the platform with front-end
         Then should validate Opportunities who have same name on both Endpoints
         And should return Opportunities who have only registered name on Front-end Endpoint
+        And should validate if an Opportunity got an Error

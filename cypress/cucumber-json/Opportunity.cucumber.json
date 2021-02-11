@@ -36,7 +36,7 @@
             "name": "request all Meets registered Opportunities",
             "result": {
               "status": "passed",
-              "duration": 349000000
+              "duration": 246000000
             }
           },
           {
@@ -46,7 +46,7 @@
             "name": "should return the response 'get_Opportunity' status 200",
             "result": {
               "status": "passed",
-              "duration": 83000000
+              "duration": 15000000
             }
           },
           {
@@ -56,7 +56,7 @@
             "name": "should return a non-null body",
             "result": {
               "status": "passed",
-              "duration": 19000000
+              "duration": 4000000
             }
           }
         ]
@@ -85,7 +85,7 @@
             "name": "request all Front-end registered Opportunities",
             "result": {
               "status": "passed",
-              "duration": 554000000
+              "duration": 205000000
             }
           },
           {
@@ -95,7 +95,7 @@
             "name": "should return the response 'get_Opportunity' status 200",
             "result": {
               "status": "passed",
-              "duration": 25000000
+              "duration": 4000000
             }
           },
           {
@@ -105,7 +105,7 @@
             "name": "should return a non-null body",
             "result": {
               "status": "passed",
-              "duration": 16000000
+              "duration": 3000000
             }
           }
         ]
@@ -134,37 +134,37 @@
             "name": "compare all registered Opportunities on the platform with front-end",
             "result": {
               "status": "passed",
-              "duration": 40000000
+              "duration": 14000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 19,
-            "name": "should return opportunities that have the same data info",
+            "name": "should validate Opportunities who have same name on both Endpoints",
             "result": {
               "status": "passed",
-              "duration": 12000000
+              "duration": 3000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 20,
-            "name": "should return that opportunities are registered at both endpoints",
+            "name": "should return Opportunities who have only registered name on Front-end Endpoint",
             "result": {
               "status": "passed",
-              "duration": 5000000
+              "duration": 2000000
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 21,
-            "name": "should return an Array with wrong Opportunities",
+            "name": "should validate if an Opportunity got an Error",
             "result": {
               "status": "passed",
-              "duration": 4000000
+              "duration": 2000000
             }
           }
         ]

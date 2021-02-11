@@ -18,3 +18,4 @@ Feature: Client
         When compare all registered Clients on the platform with Front-end Clients
         Then should validate Clients who have same name on both Endpoints
         And should return Clients who have only registered name on Front-end Endpoint
+        And should validate if a Client got an Error

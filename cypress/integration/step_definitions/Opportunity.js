@@ -60,6 +60,9 @@ When(`compare all registered Opportunities on the platform with front-end`, () =
     });
 });
 
+var opportunityErrorList = []
+var errList = []
+
 Then(`should validate Opportunities who have same name on both Endpoints`, () => {
     var nameList = []
     for (let i = 0; i < Response_Front.length; i++) {
@@ -74,7 +77,8 @@ Then(`should validate Opportunities who have same name on both Endpoints`, () =>
                             try {
                                 expect(Response_Front[i][eachProperty]).to.eq(Response_Meets[j][eachProperty])
                             } 
-                            catch (err) { 
+                            catch (err) {
+                                errList.push(JSON.stringify(err.message))
                                 continue 
                             }
                         }
@@ -84,18 +88,28 @@ Then(`should validate Opportunities who have same name on both Endpoints`, () =>
         }
     }
     
-    var opportunityErrorList = Response_Front.filter(e => !nameList.includes(e.nome))
-    cy.wrap({ opportunityErrorList }).as("OppEL")
+    opportunityErrorList = Response_Front.filter(e => !nameList.includes(e.nome))
 });
 
 Then(`should return Opportunities who have only registered name on Front-end Endpoint`, () => {
-    cy.get("@OppEL").then(when => {
-        when.opportunityErrorList.forEach(element => {
+    if (opportunityErrorList.length == 0) {
+        cy.log("There are no Opportunities with Errors in this section")
+    } else {
+        opportunityErrorList.forEach(element => {
             cy.log("Opportunity Name: " + element.nome).then(() => {
                 try {
                     expect(Response_Meets).to.include(JSON.stringify(element))
                 } catch (err) { return }
             })
         })
-    })
+    }
+    
+});
+
+Then(`should validate if an Opportunity got an Error`, () => {
+    if (errList.length > 0|| opportunityErrorList.length > 0) {
+        throw new Error("An error occurred during the validation of the Clients")
+    } else {
+        cy.log("There are no Errors in this Test")
+    }
 });

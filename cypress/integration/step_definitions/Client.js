@@ -60,21 +60,28 @@ When(`compare all registered Clients on the platform with Front-end Clients`, ()
     });
 });
 
+var clientErrorList = []
+var errList = []
+
 Then(`should validate Clients who have same name on both Endpoints`, () => {
     var nameList = []
     for (let i = 0; i < Response_Front.length; i++) {
         for (let j = 0; j < Response_Meets.length; j++) {
             if (Response_Front[i].nome === Response_Meets[j].nome) {
                 nameList.push(Response_Front[i].nome)
-                cy.log("Cliente Name: " + Response_Front[i].nome).then(() => {
+                cy.log("Client Name: " + Response_Front[i].nome).then(() => {
                     if (JSON.stringify(Response_Front[i]) == JSON.stringify(Response_Meets[j])) {
                         expect(JSON.stringify(Response_Front[i])).to.eq(JSON.stringify(Response_Meets[j]))
                     } else {
                         for (var eachProperty in Response_Front[i]) {
                             try {
+                                if (Response_Front[i][eachProperty] == "" && Response_Meets[j][eachProperty] == "") {
+                                    continue
+                                }
                                 expect(Response_Front[i][eachProperty]).to.eq(Response_Meets[j][eachProperty])
                             } 
                             catch (err) {
+                                errList.push(JSON.stringify(err.message))
                                 continue 
                             }
                         }
@@ -83,19 +90,27 @@ Then(`should validate Clients who have same name on both Endpoints`, () => {
             }
         }
     }
-    
-    var clientErrorList = Response_Front.filter(e => !nameList.includes(e.nome))
-    cy.wrap({ clientErrorList }).as("CliEL")
+    clientErrorList = Response_Front.filter(e => !nameList.includes(e.nome))
 });
 
 Then(`should return Clients who have only registered name on Front-end Endpoint`, () => {
-    cy.get("@CliEL").then(when => {
-        when.clientErrorList.forEach(element => {
+    if (clientErrorList.length == 0) {
+        cy.log("There are no Clients with Errors in this section")
+    } else {
+        clientErrorList.forEach(element => {
             cy.log("Client Name: " + element.nome).then(() => {
                 try {
                     expect(Response_Meets).to.include(JSON.stringify(element))
                 } catch (err) { return }
             })
         })
-    })
+    } 
+});
+
+Then(`should validate if a Client got an Error`, () => {
+    if (errList.length > 0|| clientErrorList.length > 0) {
+        throw new Error("An error occurred during the validation of the Clients")
+    } else {
+        cy.log("There are no Errors in this Test")
+    }
 });
