@@ -36,7 +36,7 @@
             "name": "request all Meets registered Opportunities",
             "result": {
               "status": "passed",
-              "duration": 1233000000
+              "duration": 349000000
             }
           },
           {
@@ -46,7 +46,7 @@
             "name": "should return the response 'get_Opportunity' status 200",
             "result": {
               "status": "passed",
-              "duration": 31000000
+              "duration": 83000000
             }
           },
           {
@@ -56,7 +56,7 @@
             "name": "should return a non-null body",
             "result": {
               "status": "passed",
-              "duration": 7000000
+              "duration": 19000000
             }
           }
         ]
@@ -85,7 +85,7 @@
             "name": "request all Front-end registered Opportunities",
             "result": {
               "status": "passed",
-              "duration": 394000000
+              "duration": 554000000
             }
           },
           {
@@ -95,7 +95,7 @@
             "name": "should return the response 'get_Opportunity' status 200",
             "result": {
               "status": "passed",
-              "duration": 5000000
+              "duration": 25000000
             }
           },
           {
@@ -105,7 +105,7 @@
             "name": "should return a non-null body",
             "result": {
               "status": "passed",
-              "duration": 4000000
+              "duration": 16000000
             }
           }
         ]
@@ -131,20 +131,20 @@
             "arguments": [],
             "keyword": "When ",
             "line": 18,
-            "name": "compare all registered Opportunities",
+            "name": "compare all registered Opportunities on the platform with front-end",
             "result": {
               "status": "passed",
-              "duration": 17000000
+              "duration": 40000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 19,
-            "name": "should return that opportunities have the same data info",
+            "name": "should return opportunities that have the same data info",
             "result": {
               "status": "passed",
-              "duration": 7000000
+              "duration": 12000000
             }
           },
           {
@@ -154,7 +154,7 @@
             "name": "should return that opportunities are registered at both endpoints",
             "result": {
               "status": "passed",
-              "duration": 3000000
+              "duration": 5000000
             }
           },
           {
@@ -164,7 +164,7 @@
             "name": "should return an Array with wrong Opportunities",
             "result": {
               "status": "passed",
-              "duration": 3000000
+              "duration": 4000000
             }
           }
         ]

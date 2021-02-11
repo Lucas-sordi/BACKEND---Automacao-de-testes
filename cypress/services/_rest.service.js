@@ -4,7 +4,7 @@ export default class Rest {
       method: 'GET',
       url: endpoint,
       failOnStatusCode: false
-    })
+    });
   }
   
   static post(endpoint, body) {
@@ -13,6 +13,6 @@ export default class Rest {
       url: endpoint,
       body: body,
       failOnStatusCode: false
-    })
+    });
   }
 }
