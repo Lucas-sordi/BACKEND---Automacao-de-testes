@@ -28,13 +28,14 @@ When(`compare Clients and get the ones with repeated names`, () => {
     })
 });
 
-Then(`save those Clients on Union with response status {int}`, (status) => {
+Then(`save those Clients on Union and return the response {string} status {int}`, (schema, status) => {
     if (testeArr.length === 0) {
         return true
     } else {
         testeArr.forEach(e => {
             Union.post_Union(e).then(response => {
                 cy.log("RESPONSE: " + JSON.stringify(response.body))
+                cy.log(cy.validateSchema(response.body, `${schema}/${status}`))
                 expect(response.status).to.equal(status)
             })
         });

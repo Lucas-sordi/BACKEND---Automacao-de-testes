@@ -36,7 +36,7 @@
             "name": "request all Meets registered Clients",
             "result": {
               "status": "passed",
-              "duration": 546000000
+              "duration": 570000000
             }
           },
           {
@@ -46,7 +46,7 @@
             "name": "should return the response 'get_Client' status 200",
             "result": {
               "status": "passed",
-              "duration": 61000000
+              "duration": 40000000
             }
           },
           {
@@ -56,7 +56,7 @@
             "name": "should return a non-null body",
             "result": {
               "status": "passed",
-              "duration": 8000000
+              "duration": 10000000
             }
           }
         ]
@@ -85,7 +85,7 @@
             "name": "request all Front-end registered Clients",
             "result": {
               "status": "passed",
-              "duration": 349000000
+              "duration": 563000000
             }
           },
           {
@@ -95,7 +95,7 @@
             "name": "should return the response 'get_Client' and status 200",
             "result": {
               "status": "passed",
-              "duration": 26000000
+              "duration": 19000000
             }
           },
           {
@@ -105,7 +105,7 @@
             "name": "should return a non-null body",
             "result": {
               "status": "passed",
-              "duration": 7000000
+              "duration": 8000000
             }
           }
         ]
@@ -131,20 +131,20 @@
             "arguments": [],
             "keyword": "When ",
             "line": 18,
-            "name": "compare all registered Clients",
+            "name": "compare all registered Clients on the platform with front-end clients",
             "result": {
               "status": "passed",
-              "duration": 18000000
+              "duration": 23000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 19,
-            "name": "should return that clients have the same data info",
+            "name": "should return clients who have the same data info",
             "result": {
               "status": "passed",
-              "duration": 72000000
+              "duration": 104000000
             }
           },
           {
@@ -154,7 +154,7 @@
             "name": "should return that clients are registered at both endpoints",
             "result": {
               "status": "passed",
-              "duration": 2000000
+              "duration": 7000000
             }
           },
           {
@@ -164,7 +164,7 @@
             "name": "should return an Array with wrong Clients",
             "result": {
               "status": "passed",
-              "duration": 3000000
+              "duration": 5000000
             }
           }
         ]
