@@ -2,7 +2,7 @@ import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps'
 import Opportunity from "../../services/opportunity.service.js"
 
 var Response_Meets, Response_Front
-var wrongOpp = []
+
 //get_Meets_Opportunities
 
 When(`request all Meets registered Opportunities`, () => {
@@ -15,7 +15,7 @@ When(`request all Meets registered Opportunities`, () => {
 
 Then(`should return the response {string} status {int}`, (schema, status) => {
 	cy.get("@Response").then(when => {
-        cy.validateSchema(when.response.body[n], `${schema}/${status}`)
+        cy.validateSchema(when.response.body, `${schema}/${status}`)
         expect(when.response.status).to.equal(status)
     })
 });
@@ -38,7 +38,7 @@ When(`request all Front-end registered Opportunities`, () => {
 
 Then(`should return the response {string} status {int}`, (schema, status) => {
 	cy.get("@Response").then(when => {
-        cy.validateSchema(when.response.body[n], `${schema}/${status}`)
+        cy.validateSchema(when.response.body, `${schema}/${status}`)
         expect(when.response.status).to.equal(status)
     })
 });
@@ -60,13 +60,13 @@ When(`compare all registered Opportunities on the platform with front-end`, () =
     });
 });
 
-Then(`should return opportunities that have the same data info`, () => {
+Then(`should validate Opportunities who have same name on both Endpoints`, () => {
     var nameList = []
     for (let i = 0; i < Response_Front.length; i++) {
         for (let j = 0; j < Response_Meets.length; j++) {
             if (Response_Front[i].nome === Response_Meets[j].nome) {
                 nameList.push(Response_Front[i].nome)
-                cy.log("Oportunidade: " + Response_Front[i].nome).then(() => {
+                cy.log("Opportunity Name: " + Response_Front[i].nome).then(() => {
                     if (JSON.stringify(Response_Front[i]) == JSON.stringify(Response_Meets[j])) {
                         expect(JSON.stringify(Response_Front[i])).to.eq(JSON.stringify(Response_Meets[j]))
                     } else {
@@ -75,7 +75,6 @@ Then(`should return opportunities that have the same data info`, () => {
                                 expect(Response_Front[i][eachProperty]).to.eq(Response_Meets[j][eachProperty])
                             } 
                             catch (err) { 
-                                wrongOpp.push(Response_Front[j]);
                                 continue 
                             }
                         }
@@ -89,23 +88,14 @@ Then(`should return opportunities that have the same data info`, () => {
     cy.wrap({ opportunityErrorList }).as("OppEL")
 });
 
-Then(`should return that opportunities are registered at both endpoints`, () => {
+Then(`should return Opportunities who have only registered name on Front-end Endpoint`, () => {
     cy.get("@OppEL").then(when => {
         when.opportunityErrorList.forEach(element => {
-            cy.log("Oportunidade: " + element.nome).then(() => {
+            cy.log("Opportunity Name: " + element.nome).then(() => {
                 try {
                     expect(Response_Meets).to.include(JSON.stringify(element))
                 } catch (err) { return }
             })
         })
     })
-});
-
-Then(`should return an Array with wrong Opportunities`, () => {
-    if(wrongOpp.length == 0) {
-      cy.log("Not found wrong opportunities")
-    }
-    else {
-      cy.log("Wrong opportunities: " + JSON.stringify(wrongOpp))
-    }
 });

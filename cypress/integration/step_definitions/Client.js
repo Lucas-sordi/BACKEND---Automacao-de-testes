@@ -2,7 +2,6 @@ import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps'
 import Client from "../../services/client.service.js"
 
 var Response_Meets, Response_Front
-var wrongClients = []
 
 //get_Meets_Clients
 
@@ -52,7 +51,7 @@ Then(`should return a non-null body`, () => {
 
 //get_Compare_Client
 
-When(`compare all registered Clients on the platform with front-end clients`, () => {
+When(`compare all registered Clients on the platform with Front-end Clients`, () => {
     Response_Meets.forEach(element => {
         delete element._id
     });
@@ -61,13 +60,13 @@ When(`compare all registered Clients on the platform with front-end clients`, ()
     });
 });
 
-Then(`should return clients who have the same data info`, () => {
+Then(`should validate Clients who have same name on both Endpoints`, () => {
     var nameList = []
     for (let i = 0; i < Response_Front.length; i++) {
         for (let j = 0; j < Response_Meets.length; j++) {
             if (Response_Front[i].nome === Response_Meets[j].nome) {
                 nameList.push(Response_Front[i].nome)
-                cy.log("Cliente: " + Response_Front[i].nome).then(() => {
+                cy.log("Cliente Name: " + Response_Front[i].nome).then(() => {
                     if (JSON.stringify(Response_Front[i]) == JSON.stringify(Response_Meets[j])) {
                         expect(JSON.stringify(Response_Front[i])).to.eq(JSON.stringify(Response_Meets[j]))
                     } else {
@@ -75,8 +74,7 @@ Then(`should return clients who have the same data info`, () => {
                             try {
                                 expect(Response_Front[i][eachProperty]).to.eq(Response_Meets[j][eachProperty])
                             } 
-                            catch (err) { 
-                                wrongClients.push(Response_Front[j]);
+                            catch (err) {
                                 continue 
                             }
                         }
@@ -90,23 +88,14 @@ Then(`should return clients who have the same data info`, () => {
     cy.wrap({ clientErrorList }).as("CliEL")
 });
 
-Then(`should return that clients are registered at both endpoints`, () => {
+Then(`should return Clients who have only registered name on Front-end Endpoint`, () => {
     cy.get("@CliEL").then(when => {
         when.clientErrorList.forEach(element => {
-            cy.log("Cliente: " + element.nome).then(() => {
+            cy.log("Client Name: " + element.nome).then(() => {
                 try {
                     expect(Response_Meets).to.include(JSON.stringify(element))
                 } catch (err) { return }
             })
         })
     })
-});
-
-Then(`should return an Array with wrong Clients`, () => {
-    if(wrongClients.length == 0) {
-      cy.log("Not found wrong clients")
-    }
-    else {
-      cy.log("Wrong clients: " + JSON.stringify(wrongClients))
-    }
 });

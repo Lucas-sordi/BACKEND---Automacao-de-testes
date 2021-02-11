@@ -2,9 +2,10 @@ import { Given, When, Then } from 'cypress-cucumber-preprocessor/steps'
 import Union from "../../services/union.service.js"
 import Client from "../../services/client.service.js"
 
-var testeArr
+var testeArr = []
 
 //post_Union
+
 When(`compare Clients and get the ones with repeated names`, () => {
     Client.get_Meets_Clients().then(response => {
         response = response.body
@@ -17,13 +18,13 @@ When(`compare Clients and get the ones with repeated names`, () => {
                 }
             }            
         }
-        var nameArr = response.map(item => item.nome) //Apenas os Nomes
-        var duplicatesArr = nameArr.filter((item, idx) => nameArr.indexOf(item) != idx) //Apenas os Nomes Duplicados
-        testeArr = response.filter(e => duplicatesArr.includes(e.nome)) //Forma a Array
+        var nameArr = response.map(item => item.nome)
+        var duplicatesArr = nameArr.filter((item, idx) => nameArr.indexOf(item) != idx)
+        testeArr = response.filter(e => duplicatesArr.includes(e.nome))
         if (testeArr.length === 0) {
-            cy.log("Não há Clientes com nomes repetidos!")
+            cy.log("There are no Clients with repeated names!")
         } else {
-            cy.log("Clientes com nomes repetidos: " + JSON.stringify(testeArr))
+            cy.log("Clients with repeated names: " + JSON.stringify(testeArr))
         }
     })
 });
