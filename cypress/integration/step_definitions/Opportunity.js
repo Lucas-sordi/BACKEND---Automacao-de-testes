@@ -108,7 +108,7 @@ Then(`should return Opportunities who have only registered name on Front-end End
 
 Then(`should validate if an Opportunity got an Error`, () => {
     if (errList.length > 0|| opportunityErrorList.length > 0) {
-        throw new Error("An error occurred during the validation of the Clients")
+        throw new Error("An error occurred during the validation of the Opportunities")
     } else {
         cy.log("There are no Errors in this Test")
     }
