@@ -6,9 +6,10 @@
   "scripts": {
     "cypress:open": "cypress open",
     "cucumber": "cypress-tags run -e",
+    "test": "cypress run --spec \"**/*.feature\"",
     "cypress:run": "cypress run",
     "precypress:run": "node ./cypress/support/clear.js",
-    "postcypress:run": "node ./cypress/support/report.js"
+    "cypress:report": "node ./cypress/support/report.js"
   },
   "dependencies": {
     "cypress-plugin-tab": "^1.0.5",
@@ -25,7 +26,8 @@
     "cucumberJson": {
       "generate": true,
       "outputFolder": "cypress/cucumber-json",
-      "filePrefix": ""
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
     }
   },
   "devDependencies": {

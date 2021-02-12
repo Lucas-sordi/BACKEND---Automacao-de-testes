@@ -569,7 +569,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                                 Passed
                             </p>
                         </td>
-                        <td class="percentage">100.00 %</td>
+                        <td class="percentage">66.67 %</td>
                     </tr>
                     <tr>
                         <td>
@@ -578,7 +578,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                                 Failed
                             </p>
                         </td>
-                        <td class="percentage">0.00 %</td>
+                        <td class="percentage">33.33 %</td>
                     
                     
                     </tr>
@@ -1086,6 +1086,10 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                     
 
                     
+                        <li>
+                            <span class="step failed-background" data-toggle="tooltip" title="Scenario failed">1</span>
+                        </li>
+                    
 
                     
                         <li>
@@ -1278,6 +1282,73 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
 
                     
                 
+                        
+                            <div class="scenario-step-container">
+
+                                
+                                    
+                                        <div class="label" data-toggle="tooltip" data-placement="top" title="Step failed">
+                                            <i class="fa fa-exclamation-circle fa-2x failed-color"></i>
+                                        </div>
+                                    
+                                
+
+                                <div class="text">
+                                    <span class="keyword highlight">And </span>
+
+                                    
+                                        should validate if a Client got an Error
+                                        
+                                    
+
+                                    
+
+                                </div>
+
+                                
+                                    
+
+                                    
+                                        <a href="#error23-error" data-toggle="collapse">+ Show Error</a>
+                                    
+
+                                    
+
+                                    
+
+                                    
+
+                                    
+                                
+                            </div>
+
+                        
+                            
+                                <div id="error23-error" class="scenario-step-collapse collapse">
+                                    <pre class=info>Error: An error occurred during the validation of the Clients
+    at Context.eval (https://api-desafio.vercel.app/__cypress/tests?p=cypress\integration\specs\Client.feature:157:11)
+    at Context.resolveAndRunStepDefinition (https://api-desafio.vercel.app/__cypress/tests?p=cypress\integration\specs\Client.feature:12406:9)
+    at Context.eval (https://api-desafio.vercel.app/__cypress/tests?p=cypress\integration\specs\Client.feature:11748:35)</pre>
+                                </div>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+                        
+
+                        
+                            
+                        
+
+                    
+                
             </div>
         </div>
     </div>
@@ -1319,8 +1390,8 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before
                     ],
                     datasets: [{
                         data: [
-                            3,
-                            0,
+                            2,
+                            1,
                             0,
                             0,
                             0,

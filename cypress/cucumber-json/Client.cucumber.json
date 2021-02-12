@@ -36,7 +36,7 @@
             "name": "request all Meets registered Clients",
             "result": {
               "status": "passed",
-              "duration": 251000000
+              "duration": 592000000
             }
           },
           {
@@ -46,7 +46,7 @@
             "name": "should return the response 'get_Client' status 200",
             "result": {
               "status": "passed",
-              "duration": 17000000
+              "duration": 19000000
             }
           },
           {
@@ -56,7 +56,7 @@
             "name": "should return a non-null body",
             "result": {
               "status": "passed",
-              "duration": 5000000
+              "duration": 4000000
             }
           }
         ]
@@ -85,7 +85,7 @@
             "name": "request all Front-end registered Clients",
             "result": {
               "status": "passed",
-              "duration": 218000000
+              "duration": 284000000
             }
           },
           {
@@ -95,7 +95,7 @@
             "name": "should return the response 'get_Client' and status 200",
             "result": {
               "status": "passed",
-              "duration": 7000000
+              "duration": 4000000
             }
           },
           {
@@ -105,7 +105,7 @@
             "name": "should return a non-null body",
             "result": {
               "status": "passed",
-              "duration": 5000000
+              "duration": 3000000
             }
           }
         ]
@@ -134,7 +134,7 @@
             "name": "compare all registered Clients on the platform with Front-end Clients",
             "result": {
               "status": "passed",
-              "duration": 14000000
+              "duration": 12000000
             }
           },
           {
@@ -144,7 +144,7 @@
             "name": "should validate Clients who have same name on both Endpoints",
             "result": {
               "status": "passed",
-              "duration": 89000000
+              "duration": 26000000
             }
           },
           {
@@ -154,7 +154,7 @@
             "name": "should return Clients who have only registered name on Front-end Endpoint",
             "result": {
               "status": "passed",
-              "duration": 3000000
+              "duration": 1000000
             }
           },
           {
@@ -164,8 +164,8 @@
             "name": "should validate if a Client got an Error",
             "result": {
               "status": "failed",
-              "duration": 7000000,
-              "error_message": "Error: An error occurred during the validation of the Clients\n    at Context.eval (https://api-desafio.vercel.app/__cypress/tests?p=cypress\\integration\\specs\\Client.feature:157:11)\n    at Context.resolveAndRunStepDefinition (https://api-desafio.vercel.app/__cypress/tests?p=cypress\\integration\\specs\\Client.feature:12406:9)\n    at Context.eval (https://api-desafio.vercel.app/__cypress/tests?p=cypress\\integration\\specs\\Client.feature:11748:35)\nFrom previous event:\n    at Context.thenFn (https://api-desafio.vercel.app/__cypress/runner/cypress_runner.js:155135:23)\n    at Context.then (https://api-desafio.vercel.app/__cypress/runner/cypress_runner.js:155574:21)\n    at Context.<anonymous> (https://api-desafio.vercel.app/__cypress/runner/cypress_runner.js:170040:21)\n    at https://api-desafio.vercel.app/__cypress/runner/cypress_runner.js:169464:15\nFrom previous event:\n    at runCommand (https://api-desafio.vercel.app/__cypress/runner/cypress_runner.js:169443:8)\n    at next (https://api-desafio.vercel.app/__cypress/runner/cypress_runner.js:169589:14)\n    at https://api-desafio.vercel.app/__cypress/runner/cypress_runner.js:169617:16"
+              "duration": 3000000,
+              "error_message": "Error: An error occurred during the validation of the Clients\n    at Context.eval (https://api-desafio.vercel.app/__cypress/tests?p=cypress\\integration\\specs\\Client.feature:157:11)\n    at Context.resolveAndRunStepDefinition (https://api-desafio.vercel.app/__cypress/tests?p=cypress\\integration\\specs\\Client.feature:12406:9)\n    at Context.eval (https://api-desafio.vercel.app/__cypress/tests?p=cypress\\integration\\specs\\Client.feature:11748:35)"
             }
           }
         ]

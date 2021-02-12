@@ -39,7 +39,5 @@ Para a execução, é necessária a instalação das seguintes dependências:
 
 #### 1.2 Execução
 1. Abrir um terminal no diretório `BACKEND---Automacao-de-testes`;
-2. Executar o comando `npm test` para que os testes sejam realizados.
-
-Para a execução de todos os testes, juntamente com a geração de Report (Caso todos os testes passem) e Screenshoot(Caso haja algum erro), pode ser utilizado o script:
-`npm run cypress:run`
+2. Executar o comando `npm run cypress:run` para que os testes sejam realizados. (Juntamente com o Screenshot dos erros)
+3. Executar o comando `npm run cypress:report` para que o Report do ultimo teste executado seja gerado.

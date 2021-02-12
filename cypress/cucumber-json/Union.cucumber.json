@@ -36,7 +36,7 @@
             "name": "compare Clients and get the ones with repeated names",
             "result": {
               "status": "passed",
-              "duration": 391000000
+              "duration": 227000000
             }
           },
           {
@@ -46,7 +46,7 @@
             "name": "save those Clients on Union and return the response 'post_Union' status 201",
             "result": {
               "status": "passed",
-              "duration": 2000000
+              "duration": 507000000
             }
           }
         ]
